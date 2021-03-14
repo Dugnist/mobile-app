@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "app",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
