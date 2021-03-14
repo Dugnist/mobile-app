@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "app",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
@@ -12,18 +13,9 @@
     "noUnusedLocals": true,
     "sourceMap": true,
     "target": "esnext",
-    "lib": [
-      "esnext"
-    ],
+    "lib": ["esnext"],
     "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "App.js",
-    "app",
-    "test",
-    "storybook"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["App.js", "app", "test", "storybook"]
 }
