@@ -10,5 +10,5 @@
 import App from "./app/app.tsx"
 import { AppRegistry } from "react-native"
 
-AppRegistry.registerComponent("mobileapp", () => App)
+AppRegistry.registerComponent("PizzaApp", () => App)
 export default App
