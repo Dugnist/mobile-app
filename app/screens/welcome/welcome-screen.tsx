@@ -4,12 +4,35 @@ import { useNavigation } from "@react-navigation/native"
 import { observer } from "mobx-react-lite"
 import { Button, Header, Screen, Text, Wallpaper } from "../../components"
 import { color, spacing, typography } from "../../theme"
+
 const bowserLogo = require("./bowser.png")
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
-  backgroundColor: color.transparent,
   paddingHorizontal: spacing[4],
+  marginTop: 20,
+  alignSelf: "center",
+  width: "90%",
+  backgroundColor: "rgba(255, 255, 255, 0.26)",
+  borderRadius: 20,
+  borderBottomColor: "rgba(255, 255, 255, 0.18)",
+  borderColor: "rgba(255, 255, 255, 0.18)",
+  borderEndColor: "rgba(255, 255, 255, 0.18)",
+  borderLeftColor: "rgba(255, 255, 255, 0.18)",
+  borderRightColor: "rgba(255, 255, 255, 0.18)",
+  borderStartColor: "rgba(255, 255, 255, 0.18)",
+  borderStyle: "solid",
+  borderTopColor: "rgba( 255, 255, 255, 0.18 )",
+  borderWidth: 1,
+  // Shodow
+  shadowColor: "rgba( 31, 38, 135, 0.37 )",
+  shadowOffset: {
+    width: 0,
+    height: 8,
+  },
+  shadowOpacity: 32,
+  shadowRadius: 3.84,
+  elevation: 2,
 }
 const TEXT: TextStyle = {
   color: color.palette.white,
@@ -53,7 +76,7 @@ const BOWSER: ImageStyle = {
 }
 const CONTENT: TextStyle = {
   ...TEXT,
-  color: "#BAB6C8",
+  color: "#efe",
   fontSize: 15,
   lineHeight: 22,
   marginBottom: spacing[5],
@@ -61,7 +84,17 @@ const CONTENT: TextStyle = {
 const CONTINUE: ViewStyle = {
   paddingVertical: spacing[4],
   paddingHorizontal: spacing[4],
-  backgroundColor: "#5D2555",
+  backgroundColor: "rgba(255, 255, 255, 0.26)",
+  borderRadius: 20,
+  borderBottomColor: "rgba(255, 255, 255, 0.18)",
+  borderColor: "rgba(255, 255, 255, 0.18)",
+  borderEndColor: "rgba(255, 255, 255, 0.18)",
+  borderLeftColor: "rgba(255, 255, 255, 0.18)",
+  borderRightColor: "rgba(255, 255, 255, 0.18)",
+  borderStartColor: "rgba(255, 255, 255, 0.18)",
+  borderStyle: "solid",
+  borderTopColor: "rgba( 255, 255, 255, 0.18 )",
+  borderWidth: 1,
 }
 const CONTINUE_TEXT: TextStyle = {
   ...TEXT,
@@ -69,7 +102,7 @@ const CONTINUE_TEXT: TextStyle = {
   fontSize: 13,
   letterSpacing: 2,
 }
-const FOOTER: ViewStyle = { backgroundColor: "#20162D", marginBottom: 64 }
+const FOOTER: ViewStyle = { backgroundColor: "rgba(255, 255, 255, 0.05)", marginBottom: 0 }
 const FOOTER_CONTENT: ViewStyle = {
   paddingVertical: spacing[4],
   paddingHorizontal: spacing[4],
@@ -94,10 +127,6 @@ export const WelcomeScreen = observer(function WelcomeScreen() {
         <Text style={CONTENT}>
           This probably isn't what your app is going to look like. Unless your designer handed you
           this screen and, in that case, congrats! You're ready to ship.
-        </Text>
-        <Text style={CONTENT}>
-          For everyone else, this is where you'll see a live preview of your fully functioning app
-          using Ignite.
         </Text>
       </Screen>
       <SafeAreaView style={FOOTER}>

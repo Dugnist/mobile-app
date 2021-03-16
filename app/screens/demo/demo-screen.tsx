@@ -11,13 +11,37 @@ export const heart = require("./heart.png")
 
 const FULL: ViewStyle = { flex: 1 }
 const CONTAINER: ViewStyle = {
-  backgroundColor: color.transparent,
+  // backgroundColor: color.transparent,
   paddingHorizontal: spacing[4],
+  marginTop: 20,
+  alignSelf: "center",
+  width: "90%",
+  backgroundColor: "rgba(255, 255, 255, 0.26)",
+  borderRadius: 20,
+  borderBottomColor: "rgba(255, 255, 255, 0.18)",
+  borderColor: "rgba(255, 255, 255, 0.18)",
+  borderEndColor: "rgba(255, 255, 255, 0.18)",
+  borderLeftColor: "rgba(255, 255, 255, 0.18)",
+  borderRightColor: "rgba(255, 255, 255, 0.18)",
+  borderStartColor: "rgba(255, 255, 255, 0.18)",
+  borderStyle: "solid",
+  borderTopColor: "rgba( 255, 255, 255, 0.18 )",
+  borderWidth: 1,
 }
 const DEMO: ViewStyle = {
   paddingVertical: spacing[4],
   paddingHorizontal: spacing[4],
-  backgroundColor: "#5D2555",
+  backgroundColor: "rgba(255, 255, 255, 0.26)",
+  borderRadius: 20,
+  borderBottomColor: "rgba(255, 255, 255, 0.18)",
+  borderColor: "rgba(255, 255, 255, 0.18)",
+  borderEndColor: "rgba(255, 255, 255, 0.18)",
+  borderLeftColor: "rgba(255, 255, 255, 0.18)",
+  borderRightColor: "rgba(255, 255, 255, 0.18)",
+  borderStartColor: "rgba(255, 255, 255, 0.18)",
+  borderStyle: "solid",
+  borderTopColor: "rgba( 255, 255, 255, 0.18 )",
+  borderWidth: 1,
 }
 const BOLD: TextStyle = { fontWeight: "bold" }
 const DEMO_TEXT: TextStyle = {
@@ -45,7 +69,7 @@ const TITLE: TextStyle = {
   marginBottom: spacing[5],
 }
 const TAGLINE: TextStyle = {
-  color: "#BAB6C8",
+  color: "#efe",
   fontSize: 15,
   lineHeight: 22,
   marginBottom: spacing[4] + spacing[1],
@@ -60,7 +84,7 @@ const LOVE_WRAPPER: ViewStyle = {
   alignSelf: "center",
 }
 const LOVE: TextStyle = {
-  color: "#BAB6C8",
+  color: "#efe",
   fontSize: 15,
   lineHeight: 22,
 }
@@ -71,7 +95,7 @@ const HEART: ImageStyle = {
   resizeMode: "contain",
 }
 const HINT: TextStyle = {
-  color: "#BAB6C8",
+  color: "#efe",
   fontSize: 12,
   lineHeight: 15,
   marginVertical: spacing[2],
@@ -139,11 +163,11 @@ export const DemoScreen = observer(function DemoScreen() {
         />
         <Text style={TITLE} preset="header" tx="demoScreen.title" />
         <Text style={TAGLINE} tx="demoScreen.tagLine" />
-        <BulletItem text="Integrated here, Navigation with State, TypeScript, Storybook, Solidarity, and i18n." />
+        {/* <BulletItem text="Integrated here, Navigation with State, TypeScript, Storybook, Solidarity, and i18n." />
         <BulletItem
           text={`To run Storybook, press ${platformCommand} or shake the device to show the developer menu, then select "Toggle Storybook"`}
         />
-        <BulletItem text="Load up Reactotron!  You can inspect your app, view the events, interact, and so much more!" />
+        <BulletItem text="Load up Reactotron!  You can inspect your app, view the events, interact, and so much more!" /> */}
         <View>
           <Button
             style={DEMO}
@@ -154,11 +178,11 @@ export const DemoScreen = observer(function DemoScreen() {
           <Text style={HINT} tx={`demoScreen.${Platform.OS}ReactotronHint`} />
         </View>
         <Button
-            style={DEMO}
-            textStyle={DEMO_TEXT}
-            tx="demoScreen.demoList"
-            onPress={() => navigation.navigate('demoList')}
-          />
+          style={DEMO}
+          textStyle={DEMO_TEXT}
+          tx="demoScreen.demoList"
+          onPress={() => navigation.navigate("demoList")}
+        />
         <Image source={logoIgnite} style={IGNITE} />
         <View style={LOVE_WRAPPER}>
           <Text style={LOVE} text="Made with" />
