@@ -10,7 +10,7 @@ workflows:
         XCODE_SCHEME: "MyReactApp"
       node: latest
     scripts:
-      - npm install
+      - npm install --legacy-peer-deps
       - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
       - |
         # build Android
