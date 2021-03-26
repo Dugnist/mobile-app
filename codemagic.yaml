@@ -23,5 +23,6 @@ workflows:
         xcodebuild build -workspace "$XCODE_WORKSPACE.xcworkspace" -scheme "$XCODE_SCHEME" -exportArchive -exportFormat ipa CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     artifacts:
       - android/app/build/outputs/**/*.apk
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.ipa
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
